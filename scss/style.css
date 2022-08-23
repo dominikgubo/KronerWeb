@@ -31,7 +31,7 @@ ul {
   background-image: linear-gradient(180deg, white, #dddddd);
   border-radius: 2rem;
   margin-bottom: 2rem; }
-  @media (min-width: 330px) and (max-width: 640px) {
+  @media (min-width: 375px) and (max-width: 640px) {
     .leaderboard-container {
       width: 90%; } }
   .leaderboard-container .leaderboard-container__table {
