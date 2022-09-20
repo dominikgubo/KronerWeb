@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, child, get } from "firebase/database";
+import { getDatabase, ref, child, get, orderByKey } from "firebase/database";
 
 
 const firebaseConfig = {
@@ -51,7 +51,7 @@ function addItemsToList(_p1sips, _p2sips, _winner, _round, _time){
 
 
 const dbRef = ref(getDatabase());
-get(child(dbRef, `Kroner`)).then((snapshot) => {
+get(child(dbRef, `Kroner`), orderByKey).then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
     snapshot.forEach(
