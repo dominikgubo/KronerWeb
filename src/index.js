@@ -50,11 +50,10 @@ function addItemsToList(_p1sips, _p2sips, _winner, _round, _time){
 
 
 
-const dbRef = ref(getDatabase()).orderByKey();
+const dbRef = ref(getDatabase());
 get(child(dbRef, `Kroner`)).then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
-    console.log(snapshot)
     snapshot.forEach(
       function(ChildSnapshot){
           let _p1sips = ChildSnapshot.val().playerOneSips;
@@ -65,6 +64,7 @@ get(child(dbRef, `Kroner`)).then((snapshot) => {
           addItemsToList(_p1sips, _p2sips, _winner, _round, _time)
       }
   )
+
 
     
   } else {
