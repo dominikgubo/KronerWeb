@@ -54,7 +54,8 @@ const dbRef = ref(getDatabase());
 get(child(dbRef, `Kroner`)).then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
-    snapshot.reverse().forEach(
+    console.log(snapshot)
+    snapshot.forEach(
       function(ChildSnapshot){
           let _p1sips = ChildSnapshot.val().playerOneSips;
           let _p2sips = ChildSnapshot.val().playerTwoSips;
