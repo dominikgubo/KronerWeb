@@ -46,15 +46,6 @@ function addItemsToList(_p1sips, _p2sips, _winner, _round, _time){
   p2Sips.textContent=_p2sips;
   time.innerHTML=_time;
   round.innerHTML=_round;
-
-  var allUl = document.querySelectorAll(".leaderboard-container__table");
-  console.log(allUl);
-  for(let i=0; i<allUl.length; i++){
-    allUl[i] = allUl[(allUl.length)-i]
-  }
-
-  
-
 }
 
 
@@ -84,7 +75,11 @@ get(child(dbRef, `Kroner`)).then((snapshot) => {
 
 
 
-
+var allUl = document.querySelectorAll(".leaderboard-container__table");
+console.log(allUl);
+for(let i=0; i<allUl.length; i++){
+  allUl[i] = allUl[(allUl.length)-i]
+}
 
 
 
