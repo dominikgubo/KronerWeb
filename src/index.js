@@ -77,8 +77,10 @@ get(child(dbRef, `Kroner`)).then((snapshot) => {
 
 var allUl = document.querySelectorAll(".leaderboard-container__table");
 console.log(allUl);
+console.log(allUl[1]);
+var copyList = allUl
 for(let i=0; i<allUl.length; i++){
-  allUl[i] = allUl[(allUl.length)-i]
+  allUl[i] = copyList[(allUl.length)-i]
 }
 
 
