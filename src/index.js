@@ -64,6 +64,14 @@ get(child(dbRef, `Kroner`)).then((snapshot) => {
           addItemsToList(_p1sips, _p2sips, _winner, _round, _time)
       }
   )
+
+  var allUl = document.querySelectorAll(".leaderboard-container");
+console.log(allUl);
+console.log(allUl[1]);
+var copyList = allUl
+for(let i=0; i<allUl.length; i++){
+  allUl[i] = copyList[(allUl.length)-i]
+}
     
   } else {
     console.log("No data available");
@@ -75,13 +83,7 @@ get(child(dbRef, `Kroner`)).then((snapshot) => {
 
 
 
-var allUl = document.querySelectorAll(".leaderboard-container__table");
-console.log(allUl);
-console.log(allUl[1]);
-var copyList = allUl
-for(let i=0; i<allUl.length; i++){
-  allUl[i] = copyList[(allUl.length)-i]
-}
+
 
 
 
