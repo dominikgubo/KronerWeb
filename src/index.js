@@ -54,7 +54,7 @@ const dbRef = ref(getDatabase());
 get(child(dbRef, `Kroner`)).then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
-    snapshot.forEach(
+    snapshot.reverse().forEach(
       function(ChildSnapshot){
           let _p1sips = ChildSnapshot.val().playerOneSips;
           let _p2sips = ChildSnapshot.val().playerTwoSips;
@@ -65,13 +65,6 @@ get(child(dbRef, `Kroner`)).then((snapshot) => {
       }
   )
 
-  var allUl = document.querySelectorAll(".leaderboard-container");
-console.log(allUl);
-console.log(allUl[1]);
-var copyList = allUl
-for(let i=0; i<allUl.length; i++){
-  allUl[i] = copyList[(allUl.length)-i]
-}
     
   } else {
     console.log("No data available");
