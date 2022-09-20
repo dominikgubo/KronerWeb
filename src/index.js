@@ -50,7 +50,7 @@ function addItemsToList(_p1sips, _p2sips, _winner, _round, _time){
 
 
 
-const dbRef = ref(getDatabase());
+const dbRef = ref(getDatabase()).orderByKey();
 get(child(dbRef, `Kroner`)).then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
