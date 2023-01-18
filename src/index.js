@@ -16,7 +16,7 @@ initializeApp(firebaseConfig)
 
 
 function addItemsToList(_p1sips, _p2sips, _winner, _round, _time){
-  var container=document.querySelector(".container")
+  var tableContainer=document.querySelector(".table-container")
   var leaderboardContainer=document.createElement("div")
   leaderboardContainer.classList.add("leaderboard-container")
   var ul=document.createElement("ul")
@@ -32,7 +32,7 @@ function addItemsToList(_p1sips, _p2sips, _winner, _round, _time){
   var round=document.createElement("div")
 
 
-  container.prepend(leaderboardContainer);
+  tableContainer.prepend(leaderboardContainer);
   leaderboardContainer.appendChild(ul);
   ul.appendChild(winner);
   ul.appendChild(p1Sips);
