@@ -32,7 +32,7 @@ function addItemsToList(_p1sips, _p2sips, _winner, _round, _time){
   var round=document.createElement("div")
 
 
-  container.appendChild(leaderboardContainer);
+  container.prepend(leaderboardContainer);
   leaderboardContainer.appendChild(ul);
   ul.appendChild(winner);
   ul.appendChild(p1Sips);
